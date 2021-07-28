@@ -9,8 +9,6 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>library</module>
-        <module>application</module>
         <module>HRAPIServer</module>
         <module>UserService</module>
         <module>HRBusinessLogic</module>
