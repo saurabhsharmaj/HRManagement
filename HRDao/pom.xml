@@ -1,33 +1,78 @@
+<!-- <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"> 
+	<modelVersion>4.0.0</modelVersion> <parent> <groupId>org.springframework</groupId> 
+	<artifactId>HRManagement</artifactId> <version>0.1.0</version> </parent> 
+	<artifactId>HRDao</artifactId> <dependencies> <dependency> <groupId>org.springframework</groupId> 
+	<artifactId>HRModel</artifactId> <version>0.1.0</version> </dependency> <dependency> 
+	<groupId>org.springframework</groupId> <artifactId>HRConfig</artifactId> 
+	<version>0.1.0</version> </dependency> <dependency> <groupId>org.springframework.boot</groupId> 
+	<artifactId>spring-boot-starter-data-jpa</artifactId> </dependency> <dependency> 
+	<groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> <scope>runtime</scope> 
+	</dependency> </dependencies> </project> -->
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>org.springframework</groupId>
+		<groupId>com.ebit.hrmanagement</groupId>
 		<artifactId>HRManagement</artifactId>
 		<version>0.1.0</version>
 	</parent>
+
 	<artifactId>HRDao</artifactId>
+	<groupId>com.ebit.hrmanagement</groupId>
+	<version>0.1.0</version>
+
+	<properties>
+		<java.version>11</java.version>
+		<spring-cloud.version>2020.0.3</spring-cloud.version>
+	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>HRModel</artifactId>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		
+
+		<dependency>
+			<groupId>com.ebit.hrmanagement</groupId>
+			<artifactId>HRConfig</artifactId>
 			<version>0.1.0</version>
 		</dependency>
 		
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>HRConfig</artifactId>
+			<groupId>com.ebit.hrmanagement</groupId>
+			<artifactId>HRModel</artifactId>
 			<version>0.1.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+
 	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>

@@ -1,4 +1,4 @@
-package org.springframework;
+package com.ebit.hrmanagement.config;
 
 import java.util.Properties;
 
@@ -18,7 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  
 @Configuration
 @EnableTransactionManagement
-@ComponentScan(basePackages="org.springframework")
+@ComponentScan(basePackages="com.ebit.hrmanagement.*")
 @PropertySource(value="classpath:application.properties")
 public class HibernateConfig {
      

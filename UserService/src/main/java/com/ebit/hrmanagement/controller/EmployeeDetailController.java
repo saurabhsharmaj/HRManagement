@@ -1,7 +1,6 @@
-package com.ebit.hrmanagement;
+package com.ebit.hrmanagement.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,17 +9,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ebit.hrmanagement.model.EmpDetail;
-import com.ebit.hrmanagement.model.User;
 //import com.ebit.hrmanagement.model.User;
 import com.ebit.hrmanagement.service.EmpDetailService;
 import com.ebit.hrmanagement.service.UserService;
-import com.ebit.hrmanagement.vo.EmpDetailVO;
 
 
 @RestController
-public class EmployeeDetailCntroller {
-
-//	EmployeeDetailsRepository empdetrep;
+public class EmployeeDetailController {
 	@Autowired
 	EmpDetailService empDetailService;
 	

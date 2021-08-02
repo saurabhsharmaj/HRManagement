@@ -1,4 +1,4 @@
-package com.ebit.hrmanagement;
+package com.ebit.hrmanagement.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 

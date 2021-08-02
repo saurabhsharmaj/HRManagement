@@ -5,12 +5,12 @@ package com.ebit.hrmanagement.service;
 import java.util.ArrayList;
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ebit.hrmanagement.dao.EmployeeDetailsRepository;
 import com.ebit.hrmanagement.model.EmpDetail;
-
 
 @Service
 public class EmpDetailService 

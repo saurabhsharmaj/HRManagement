@@ -10,20 +10,20 @@
 		<version>2.5.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	
+
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2020.0.3</spring-cloud.version>
 	</properties>
 
-	<groupId>org.springframework</groupId>
+	<groupId>com.ebit.hrmanagement</groupId>
 	<artifactId>HRManagement</artifactId>
 	<version>0.1.0</version>
 	<packaging>pom</packaging>
-	
+
 	<dependencies>
-		 <dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
@@ -42,11 +42,8 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+		<!-- <dependency> <groupId>com.h2database</groupId> <artifactId>h2</artifactId> 
+			<scope>runtime</scope> </dependency> -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -58,23 +55,23 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-		    <scope>runtime</scope>
-		</dependency>    
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
-<name>HRManagement</name>
+	<name>HRManagement</name>
 
 
 	<modules>
+		<module>HRModel</module>
+		<module>HRConfig</module>
 		<module>HRAPIServer</module>
 		<module>UserService</module>
 		<module>HRBusinessLogic</module>
 		<module>HRService</module>
 		<module>HRDao</module>
-		<module>HRModel</module>
 		<module>HRAdaptor</module>
-		<module>HRConfig</module>
 	</modules>
 
 </project>
